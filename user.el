@@ -36,6 +36,7 @@
 
 (set-face-attribute 'default nil :height 160)
 (load-theme 'solarized-light t)
+
 (set-frame-font "Consolas 14")
 
 ;; Flyspell often slows down editing so it's turned off
@@ -88,6 +89,9 @@
 
 ;;; jshint checking
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+(custom-set-variables
+ '(flycheck-check-syntax-automatically (quote (save new-line mode-enabled))))
 
 ;;; whitespace mode
 (require 'whitespace)
