@@ -1,0 +1,76 @@
+((("thing" .
+   [2 0 0 0 0])
+  ("car" .
+   [3 0 0])
+  ("prototype" .
+   [1 0 0 0 0 0 0 0 0])
+  ("global-whitespace-mode" .
+   [2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("whitespace-mode" .
+   [3 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("whitespace" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("alert" .
+   [2 0 0 0 0])
+  ("myCar" .
+   [4 0 0 0 0])
+  ("nil" .
+   [1 0 0])
+  ("exec-path-from-shell-initialize" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("memq" .
+   [1 0 0 0])
+  ("when" .
+   [1 0 0 0])
+  ("add-hook" .
+   [6 0 0 0 0 0 0 0])
+  ("if" .
+   [1 0])
+  ("local-set-key" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("defun" .
+   [1 0 0 0 0])
+  ("autoload" .
+   [3 0 0 0 0 0 0 0])
+  ("add-to-list" .
+   [2 0 0 0 0 0 0 0 0 0 0])
+  ("ido-mode" .
+   [1 0 0 0 0 0 0 0])
+  ("ido" .
+   [1 0 0])
+  ("sharejs" .
+   [5 0 0 0 0 0 0])
+  ("var" .
+   [1 0 0])
+  ("function" .
+   [4 0 0 0 0 0 0 0])
+  ("console" .
+   [1 0 0 0 0 0 0])
+  ("setq" .
+   [4 0 0 0])
+  ("projectile-global-mode" .
+   [0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("ido-everywhere" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("define-key" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("kbd" .
+   [2 0 0])
+  ("js-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0])
+  ("lambda" .
+   [3 0 0 0 0 0])
+  ("eval-after-load" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tern" .
+   [1 0 0 0])
+  ("progn" .
+   [1 0 0 0 0])
+  ("tern-auto-complete" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("tern-ac-setup" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("js2-mode-hook" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("require" .
+   [1 0 0 0 0 0 0])))
