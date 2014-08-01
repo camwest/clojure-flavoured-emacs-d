@@ -1,5 +1,5 @@
 ;;; package --- Summary
-;;; Commentary: 
+;;; Commentary:
 ;;; This is my own personal customizations.  I borrowed
 ;;; them from a lot of places
 
@@ -20,7 +20,7 @@
 ;;
 ;; (require 'yaml-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
-;; 
+;;
 ;; Adding this code will make Emacs enter yaml mode whenever you open
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
@@ -37,7 +37,8 @@
 (set-face-attribute 'default nil :height 160)
 (load-theme 'solarized-light t)
 
-(set-frame-font "Consolas 14")
+(add-to-list 'default-frame-alist
+             '(font . "Consolas 14"))
 
 ;; Flyspell often slows down editing so it's turned off
 (remove-hook 'text-mode-hook 'turn-on-flyspell)
@@ -58,7 +59,7 @@
 (add-to-list 'auto-mode-alist '("\\.json$" . js2-mode))
 
 (defvar camwest/packages
-  '(js2-mode ac-js2 projectile flx-ido flycheck exec-path-from-shell tern tern-auto-complete))
+  '(js2-mode ac-js2 projectile flx-ido flycheck exec-path-from-shell))
 
 (dolist (p camwest/packages)
   (when (not (package-installed-p p))
@@ -79,14 +80,6 @@
 
 (add-hook 'js2-mode-hook 'my-js2-mode-hook)
 
-;;; tern-auto complete
-
-(add-hook 'js2-mode-hook (lambda () (tern-mode t)))
-(eval-after-load 'tern
-  '(progn
-    (require 'tern-auto-complete)
-    (tern-ac-setup)))
-
 ;;; jshint checking
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
@@ -96,20 +89,6 @@
 ;;; whitespace mode
 (require 'whitespace)
 (global-whitespace-mode t)
-
-
-;;; auto-complete mod
-;;; should be loaded after yasnippet
-(require 'auto-complete-config)
-
-(add-to-list 'ac-dictionary-directories "~/.emacs.d/ac-dict")
-(ac-config-default)
-
-;;; set the trigger key so that it can work together with yasnippet on
-;;; tab key, if the word exists in yasnippet, pressing tab will cause
-;;; yasnippet to activate, otherwise, auto-complete will
-(ac-set-trigger-key "TAB")
-(ac-set-trigger-key "<tab>")
 
 ;;; Ido Mode
 (require 'flx-ido)
@@ -128,3 +107,20 @@
 (add-to-list 'projectile-globally-ignored-directories "elpa")
 (add-to-list 'projectile-globally-ignored-directories ".cache")
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
+
+;; Removing trailing whitespace
+
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+;; Turn on line numbers
+
+(global-linum-mode 1)
+
+;; Make re-builder use string instead of read
+(require 're-builder)
+(setq reb-re-syntax 'string)
+
+;; disable auto-fill-mode
+
+(auto-fill-mode -1)
+(remove-hook 'text-mode-hook #'turn-on-auto-fill)

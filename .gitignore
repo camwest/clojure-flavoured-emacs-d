@@ -6,3 +6,9 @@ places
 elpa/
 
 ac-comphist.dat
+
+elpa/*
+
+elpa/archives/melpa/archive-contents
+
+projectile-bookmarks.eld
